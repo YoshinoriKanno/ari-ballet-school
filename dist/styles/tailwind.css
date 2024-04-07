@@ -522,8 +522,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .resize {
   resize: both;
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .filter {

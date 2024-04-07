@@ -1,9 +1,20 @@
 .p-header-sticky {
-  position: sticky;
-  top: 0;
+  position: fixed;
+
+  // top: 440px;
+  // left: 0px;
   z-index: 1;
+
+  // 90度回転
+  // transform: rotate(-90deg);
+
+  /* 回転の基点を左上に設定 */
+  // transform-origin: top left;
+  width: 90px;
   background-color: #fff;
   box-shadow: 0 3px 10px #00000029;
+
+  // height: 100%;
 
   .p-header-sticky__container {
     display: grid;
@@ -15,7 +26,7 @@
     margin-left: -4px;
 
     @include mq-cdt(tablet) {
-      grid-template-columns: auto auto;
+      // grid-template-columns: auto auto;
       width: unset;
       height: 70px;
       margin-right: unset;
@@ -24,14 +35,20 @@
   }
 
   .p-header-sticky__logos {
-    display: grid;
+    // display: grid;
 
     // height: 58px;
-    grid-template-rows: auto auto;
+    // grid-template-rows: auto auto;
     gap: 6px;
     align-items: center;
     justify-content: start;
     width: 200px;
+
+    // 90度回転
+    // transform: rotate(-90deg);
+
+    /* 回転の基点を左上に設定 */
+    // transform-origin: top left;
 
     @include mq-cdt(tablet) {
       grid-template-rows: unset;
@@ -70,7 +87,12 @@
   }
 
   .p-header-sticky__logo {
-    width: 200px;
+    // width: 200px;
+    // 90度回転
+    transform: rotate(-90deg);
+
+    /* 回転の基点を左上に設定 */
+    transform-origin: top left;
 
     @include mq-cdt(tablet) {
       width: (200px * 1.5);

@@ -38,6 +38,8 @@
       referrerpolicy="no-referrer"
     />
 
+    <link rel="stylesheet" href="styles/micromodal.css" />
+
     <!-- CSS ================================ -->
     <link rel="stylesheet" href="styles/style.css?202309291320" />
     <link rel="stylesheet" href="styles/tailwind.css?202309291320" />
@@ -53,7 +55,7 @@
           <div class="p-header-sticky__container">
             <h1 class="p-header-sticky__logos">
               <div class="p-header-sticky__logo-container">
-                <img src="https://placeholder.pics/svg/200x25" alt="" width="200" height="25" class="p-header-sticky__logo" />
+                <img src="https://placeholder.pics/svg/300x60/DEDEDE/555555/Ari%20Ballet%20School" alt="" width="300" height="60" class="p-header-sticky__logo" />
               </div>
               <div class="p-header-sticky__logo-dai-ichi-life-container">
                 <img src="https://placeholder.pics/svg/76x13" alt="" width="76" height="13" class="p-header-sticky__logo-dai-ichi-life" />
@@ -63,6 +65,10 @@
         </div>
       </header>
       <div class="l-container">
+        <section style="background-color: lightblue; height: 1000px">section 1</section>
+        <section style="background-color: lightcoral; height: 1000px">section 2</section>
+        <section style="background-color: lightcyan; height: 1000px">section 3</section>
+        <section style="background-color: lightgoldenrodyellow; height: 1000px">section 4</section>
         <div>
           <h2 class="p-heading">Lorem, ipsum.</h2>
           <p class="p-catch">Lorem, ipsum dolor.</p>
@@ -127,6 +133,25 @@
       </div>
     </footer>
 
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <p>Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.</p>
+          </main>
+          <footer class="modal__footer">
+            <button class="modal__btn modal__btn-primary">Continue</button>
+            <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <button class="no-underline bg-dark-green bn br2 dib f6 grow ph4 pv3 white" data-micromodal-trigger="modal-1" role="button">Demo Modal</button>
+
     <!-- ローディング画面 -->
     <div id="loading">
       <!-- <div class="spinner"></div> -->
@@ -141,6 +166,12 @@
       MatchHeight.reset();
     </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+
+    <!-- Micromodal ================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script>
+      MicroModal.init();
+    </script>
 
     <script src="scripts/script.js" type="module"></script>
   </body>
