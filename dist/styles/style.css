@@ -35,7 +35,8 @@ body {
     sans-serif;
   font-weight: 600;
   line-height: 160%;
-  color: #555;
+  color: white;
+  background-color: black;
 }
 
 .l-body {
@@ -99,6 +100,14 @@ body {
   .l-main-content {
     width: 500px;
   }
+}
+
+.l-side-bg {
+  position: fixed;
+  top: 0;
+  width: 16.6666666667vw;
+  height: 100vh;
+  background-color: white;
 }
 
 .l-footer {
@@ -265,30 +274,22 @@ body {
 
 .p-header-sticky {
   position: fixed;
-  z-index: 1;
+  left: 50%;
+  z-index: 3;
 
   /* 回転の基点を左上に設定 */
-  width: 90px;
+  width: 8.3333333333vw;
+  height: 400px;
+  margin-left: calc(-41.6666666667vw + 0px);
   background-color: #fff;
+  background-color: red;
   box-shadow: 0 3px 10px rgb(0 0 0 / 16.1%);
 }
 .p-header-sticky .p-header-sticky__container {
   display: grid;
   align-items: center;
   justify-content: start;
-  width: 200px;
-  height: 58px;
-  margin-right: -4px;
-  margin-left: -4px;
-}
-
-@media screen and (width >= 768px) {
-  .p-header-sticky .p-header-sticky__container {
-    width: unset;
-    height: 70px;
-    margin-right: unset;
-    margin-left: unset;
-  }
+  width: 90px;
 }
 .p-header-sticky .p-header-sticky__logos {
   gap: 6px;

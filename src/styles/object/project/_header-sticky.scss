@@ -1,17 +1,21 @@
 .p-header-sticky {
   position: fixed;
+  left: 50%;
 
   // top: 440px;
   // left: 0px;
-  z-index: 1;
+  z-index: 3;
 
   // 90度回転
   // transform: rotate(-90deg);
 
   /* 回転の基点を左上に設定 */
   // transform-origin: top left;
-  width: 90px;
+  width: math.div(1, 12) * 100vw;
+  height: 400px;
+  margin-left: calc(-5vw / 12 * 100 + 0px);
   background-color: #fff;
+  background-color: red;
   box-shadow: 0 3px 10px #00000029;
 
   // height: 100%;
@@ -20,17 +24,22 @@
     display: grid;
     align-items: center;
     justify-content: start;
-    width: 200px;
-    height: 58px;
-    margin-right: -4px;
-    margin-left: -4px;
+    width: 90px;
+
+    // height: 58px;
+    // margin-right: -4px;
+    // margin-left: -4px;
+    // left: 50%;
+    // margin-left: calc(-4vw / 12 * 100);
+    // position: absolute;
+    // z-index: 3;
 
     @include mq-cdt(tablet) {
       // grid-template-columns: auto auto;
-      width: unset;
-      height: 70px;
-      margin-right: unset;
-      margin-left: unset;
+      // width: unset;
+      // height: 70px;
+      // margin-right: unset;
+      // margin-left: unset;
     }
   }
 

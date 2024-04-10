@@ -53,3 +53,11 @@
     width: 500px;
   }
 }
+
+.l-side-bg {
+  position: fixed;
+  top: 0;
+  width: math.div(2, 12) * 100vw;
+  height: 100vh;
+  background-color: white;
+}
