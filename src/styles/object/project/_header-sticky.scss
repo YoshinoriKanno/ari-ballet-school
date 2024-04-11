@@ -1,25 +1,4 @@
 .p-header-sticky {
-  position: fixed;
-  left: 50%;
-
-  // top: 440px;
-  // left: 0px;
-  z-index: 3;
-
-  // 90度回転
-  // transform: rotate(-90deg);
-
-  /* 回転の基点を左上に設定 */
-  // transform-origin: top left;
-  width: math.div(1, 12) * 100vw;
-  height: 400px;
-  margin-left: calc(-5vw / 12 * 100 + 0px);
-  background-color: #fff;
-  background-color: red;
-  box-shadow: 0 3px 10px #00000029;
-
-  // height: 100%;
-
   .p-header-sticky__container {
     display: grid;
     align-items: center;

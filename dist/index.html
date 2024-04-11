@@ -49,9 +49,9 @@
   </head>
 
   <body>
-    <main class="p-main">
-      <header class="p-header-sticky">
-        <div class="l-container">
+    <div class="l-wrapper">
+      <header class="l-header-sticky p-header-sticky">
+        <div class="">
           <div class="p-header-sticky__container">
             <!-- <h1 class="p-header-sticky__logos">
               <div class="p-header-sticky__logo-container">
@@ -64,93 +64,59 @@
           </div>
         </div>
       </header>
-      <div class="l-container">
-        <section style="background-color: lightblue; height: 1000px">section 1</section>
-        <section style="background-color: lightcoral; height: 1000px">section 2</section>
-        <section style="background-color: lightcyan; height: 1000px">section 3</section>
-        <section style="background-color: lightgoldenrodyellow; height: 1000px">section 4</section>
-        <div>
-          <h2 class="p-heading">Lorem, ipsum.</h2>
-          <p class="p-catch">Lorem, ipsum dolor.</p>
+      <main class="l-base">
+        <div class="">
+          <section style="background-color: lightblue; height: 1000px">section 1</section>
+          <section style="background-color: lightcoral; height: 1000px">section 2</section>
+          <section style="background-color: lightcyan; height: 1000px">section 3</section>
+          <section style="background-color: lightgoldenrodyellow; height: 1000px">section 4</section>
         </div>
-        <div class="p-row">
-          <div class="">
-            <div class="p-card">
-              <h4 class="p-card-heading">Lorem ipsum dolor sit amet consectetur.</h4>
-              <div class="p-body">
-                <h3><img src="https://placehold.jp/320x96.png" alt="" class="p-logo" width="320" height="96" /></h3>
-                <p class="p-logo-sub">［Lorem, ipsum.］</p>
-                <ul class="p-points">
-                  <li class="p-point">Lorem</li>
-                  <li class="p-point">Lorem</li>
-                  <li class="p-point">Lorem</li>
-                </ul>
-                <a href="" class="c-cta-button c-cta-button--uchinoko p-cta-button-group__button p-cta-button-group__button--uchinoko">Lorem, ipsum dolor.</a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="p-card p-card--light">
-              <h4 class="p-card-heading">Lorem ipsum dolor sit amet consectetur.</h4>
-              <div class="p-body">
-                <h3><img src="https://placehold.jp/509x96.png" alt="" class="p-light-logo" width="509" height="96" /></h3>
-                <p class="p-logo-sub">［Lorem, ipsum.］</p>
-                <ul class="p-points">
-                  <li class="p-point">Lorem</li>
-                  <li class="p-point">Lorem</li>
-                </ul>
-                <a href="" class="c-cta-button c-cta-button-uchinoko-light p-cta-button-group__button p-cta-button-group__button--uchinoko-light">Lorem, ipsum dolor.</a>
-              </div>
+        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+          <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+              <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+              </header>
+              <main class="modal__content" id="modal-1-content">
+                <p>Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.</p>
+              </main>
+              <footer class="modal__footer">
+                <button class="modal__btn modal__btn-primary">Continue</button>
+                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+              </footer>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-
-    <footer class="l-footer">
-      <div class="l-footer__links">
-        <div class="l-container">
-          <ul class="l-footer__links-row">
-            <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
-            <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
-            <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
-            <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
-            <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
-          </ul>
-          <p class="l-footer__links-note">※Lorem ipsum dolor sit amet consectetur.<br class="mobile-m:hidden" />Lorem, ipsum.</p>
-        </div>
-      </div>
-      <div class="l-footer__container">
-        <div class="l-container">
-          <ul class="l-footer__note">
-            <li class="l-footer__note-list">
-              <span>※</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam perspiciatis cumque, deleniti repellat hic. Quis magni incidunt culpa deserunt?
-            </li>
-            <li class="l-footer__note-list">募2309-252(25.10)</li>
-          </ul>
-          <p class="l-footer__copy-right">Copyright Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-      </div>
-    </footer>
-
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <header class="modal__header">
-            <h2 class="modal__title" id="modal-1-title">Micromodal</h2>
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-          </header>
-          <main class="modal__content" id="modal-1-content">
-            <p>Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.</p>
-          </main>
-          <footer class="modal__footer">
-            <button class="modal__btn modal__btn-primary">Continue</button>
-            <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-          </footer>
-        </div>
-      </div>
+        <button class="no-underline bg-dark-green bn br2 dib f6 grow ph4 pv3 white" data-micromodal-trigger="modal-1" role="button">Demo Modal</button>
+        <footer class="l-footer">
+          <div class="l-footer__links">
+            <div class="l-container">
+              <ul class="l-footer__links-row">
+                <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
+                <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
+                <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
+                <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
+                <li class="l-footer__links-col"><a href="">Lorem, ipsum.</a></li>
+              </ul>
+              <p class="l-footer__links-note">※Lorem ipsum dolor sit amet consectetur.<br class="mobile-m:hidden" />Lorem, ipsum.</p>
+            </div>
+          </div>
+          <div class="l-footer__container">
+            <div class="l-container">
+              <ul class="l-footer__note">
+                <li class="l-footer__note-list">
+                  <span>※</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam perspiciatis cumque, deleniti repellat hic. Quis magni incidunt culpa deserunt?
+                </li>
+                <li class="l-footer__note-list">募2309-252(25.10)</li>
+              </ul>
+              <p class="l-footer__copy-right">Copyright Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+        </footer>
+      </main>
     </div>
-    <button class="no-underline bg-dark-green bn br2 dib f6 grow ph4 pv3 white" data-micromodal-trigger="modal-1" role="button">Demo Modal</button>
+
     <div class="l-side-bg"></div>
 
     <!-- ローディング画面 -->
