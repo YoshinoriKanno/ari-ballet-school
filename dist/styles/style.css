@@ -1,26 +1,5 @@
 @charset "UTF-8";
-@import 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap';
-
-@font-face {
-  font-family: mobo;
-
-  /* フォントファイルへのパスとフォーマット */
-  font-weight: bold;
-
-  /* フォントの名前 */
-  src: url('../fonts/MOBO-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: mobo;
-
-  /* フォントファイルへのパスとフォーマット */
-  font-weight: 600;
-
-  /* フォントの名前 */
-  src: url('../fonts/MOBO-SemiBold.woff2') format('woff2');
-}
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap';
 html {
   scroll-behavior: smooth;
 }
@@ -31,9 +10,8 @@ body {
   width: 100%;
   min-height: 100dvh;
   margin: 0;
-  font-family: mobo, 'Noto Sans JP', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
+  font-family: Montserrat, 'Noto Sans JP', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo,
     sans-serif;
-  font-weight: 600;
   line-height: 160%;
   color: white;
   background-color: black;
@@ -380,6 +358,36 @@ body {
   }
 }
 
+.p-hero {
+  overflow: hidden;
+}
+.p-hero .p-hero__image-container {
+  position: relative;
+  top: -20.8333333333vw;
+}
+
+@media screen and (width >= 1440px) {
+  .p-hero .p-hero__image-container {
+    top: -300px;
+  }
+}
+.p-hero .p-hero__image {
+  height: 91.6666666667vw;
+  margin-right: -8.3333333333vw;
+  overflow: hidden;
+  background-color: red;
+}
+
+@media screen and (width >= 1440px) {
+  .p-hero .p-hero__image {
+    height: 1320px;
+    margin-right: -120px;
+  }
+}
+.p-hero .p-hero__image img {
+  object-fit: cover;
+}
+
 /* ローディング画面 */
 #loading {
   position: fixed;
@@ -554,6 +562,42 @@ body {
   .p-masthead-sp__logo {
     max-width: 200px;
   }
+}
+
+.p-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.p-nav .p-nav__lists {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: start;
+}
+.p-nav .p-nav__list {
+  margin-right: 1.5em;
+}
+.p-nav .p-nav__link {
+  position: relative;
+  padding-bottom: 8px;
+}
+.p-nav .p-nav__link::before,
+.p-nav .p-nav__link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  content: '';
+  background-color: rgb(255 255 255);
+  transition: width 0.2s ease-out;
+}
+.p-nav .p-nav__link::before {
+  width: 100%;
+  background-color: rgb(255 255 255 / 25%);
+}
+.p-nav .p-nav__link:hover::after {
+  width: 100%;
 }
 
 .p-main {

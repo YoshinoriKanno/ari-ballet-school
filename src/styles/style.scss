@@ -14,7 +14,7 @@
 // ==========================================================================
 
 @import 'layout/layout';
-@import 'layout/phase02-footer';
+@import 'layout/footer';
 
 // ==========================================================================
 // Object
@@ -32,8 +32,10 @@
 // -----------------------------------------------------------------
 
 @import 'object/project/header-sticky';
+@import 'object/project/hero';
 @import 'object/project/loading';
 @import 'object/project/masthead';
+@import 'object/project/nav';
 @import 'object/project/project';
 
 // -----------------------------------------------------------------

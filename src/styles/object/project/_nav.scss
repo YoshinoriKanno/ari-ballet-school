@@ -1,0 +1,43 @@
+.p-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  .p-nav__lists {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: start;
+  }
+
+  .p-nav__list {
+    margin-right: 1.5em;
+  }
+
+  .p-nav__link {
+    position: relative;
+    padding-bottom: 8px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 0%;
+      height: 1px;
+      content: '';
+      background-color: rgb(255 255 255 / 100%);
+      transition: width 0.2s ease-out; // アニメーションの適用
+    }
+
+    &::before {
+      width: 100%;
+      background-color: rgb(255 255 255 / 25%);
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
