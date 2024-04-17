@@ -38,8 +38,6 @@
     position: relative;
     left: 50%;
     width: 375px;
-
-    // margin-top: 40px;
     margin-left: -20px;
     border-radius: 60px 60px 0 0;
     box-shadow: 0 0 20px #00000029;
@@ -62,7 +60,7 @@
   height: 100vh;
   background-color: white;
 
-  @media screen and (width >= 1440px) {
+  @media screen and (width >=1440px) {
     width: calc(240px + (100vw - 1440px) * 0.5);
   }
 }
@@ -78,7 +76,7 @@
   background-color: red;
   box-shadow: 0 3px 10px #00000029;
 
-  @media screen and (width >= 1440px) {
+  @media screen and (width >=1440px) {
     width: 120px;
     margin-left: -660px;
   }
@@ -89,7 +87,7 @@
   padding-left: math.div(1vw, 12) * 100;
   margin-left: math.div(2vw, 12) * 100;
 
-  @media screen and (width >= 1440px) {
+  @media screen and (width >=1440px) {
     padding-right: 120px;
     padding-left: 120px;
     margin-left: 240px;

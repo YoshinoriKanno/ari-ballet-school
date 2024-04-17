@@ -1,7 +1,14 @@
 .p-hero {
+  height: math.div((1320vw - 300), 1440) * 100;
+  margin-right: math.div(-1vw, 12) * 100;
   overflow: hidden;
 
-  .p-hero__image-container {
+  @media screen and (width >=1440px) {
+    height: (1320px - 300);
+    margin-right: -120px;
+  }
+
+  .p-hero__image-frame {
     position: relative;
     top: math.div(-300vw, 1440) * 100;
 
@@ -10,22 +17,26 @@
     }
   }
 
-  .p-hero__image {
+  .p-hero__image-wrapper {
     height: math.div(1320vw, 1440) * 100;
-    margin-right: math.div(-1vw, 12) * 100;
     overflow: hidden;
-    background-color: red;
 
     @media screen and (width >=1440px) {
       height: 1320px;
-      margin-right: -120px;
     }
+  }
 
-    img {
-      object-fit: cover;
+  .p-hero__image {
+    object-fit: cover;
+  }
 
-      // 中心点を下に設定
-      // object-position: center bottom;
-    }
+  .p-hero__logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 32px;
+    width: 640px;
+    margin: auto;
+    opacity: 0.35;
   }
 }

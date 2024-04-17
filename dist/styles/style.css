@@ -359,33 +359,48 @@ body {
 }
 
 .p-hero {
+  height: 70.8333333333vw;
+  margin-right: -8.3333333333vw;
   overflow: hidden;
 }
-.p-hero .p-hero__image-container {
+
+@media screen and (width >= 1440px) {
+  .p-hero {
+    height: 1020px;
+    margin-right: -120px;
+  }
+}
+.p-hero .p-hero__image-frame {
   position: relative;
   top: -20.8333333333vw;
 }
 
 @media screen and (width >= 1440px) {
-  .p-hero .p-hero__image-container {
+  .p-hero .p-hero__image-frame {
     top: -300px;
   }
 }
-.p-hero .p-hero__image {
+.p-hero .p-hero__image-wrapper {
   height: 91.6666666667vw;
-  margin-right: -8.3333333333vw;
   overflow: hidden;
-  background-color: red;
 }
 
 @media screen and (width >= 1440px) {
-  .p-hero .p-hero__image {
+  .p-hero .p-hero__image-wrapper {
     height: 1320px;
-    margin-right: -120px;
   }
 }
-.p-hero .p-hero__image img {
+.p-hero .p-hero__image {
   object-fit: cover;
+}
+.p-hero .p-hero__logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  width: 640px;
+  margin: auto;
+  opacity: 0.35;
 }
 
 /* ローディング画面 */

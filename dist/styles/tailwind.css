@@ -522,12 +522,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
-  position: relative;
+.absolute {
+  position: absolute;
 }
 
-.hidden {
-  display: none;
+.relative {
+  position: relative;
 }
 
 .grow {

@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const targets = document.querySelectorAll('.gsap-paralax-image');
   const valParallax = 60;
   targets.forEach((target) => {
-    gsap.set(target.querySelector('img'), {
+    gsap.set(target.querySelector('.p-hero__image'), {
       height: `calc(100% + ${valParallax}px)`,
     });
     gsap.fromTo(
-      target.querySelector('img'),
+      target.querySelector('.p-hero__image'),
       {
         y: valParallax,
       },
