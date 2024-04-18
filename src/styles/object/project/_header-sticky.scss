@@ -1,25 +1,11 @@
 .p-header-sticky {
+  $elms-width: 40px;
+  $logo-height: 326.66px;
+
   .p-header-sticky__container {
-    // display: grid;
-    // align-items: center;
-    // justify-content: start;
-    // width: 90px;
+    padding-top: 32px;
+    color: Black;
 
-    // height: 58px;
-    // margin-right: -4px;
-    // margin-left: -4px;
-    // left: 50%;
-    // margin-left: calc(-4vw / 12 * 100);
-    // position: absolute;
-    // z-index: 3;
-
-    @include mq-cdt(tablet) {
-      // grid-template-columns: auto auto;
-      // width: unset;
-      // height: 70px;
-      // margin-right: unset;
-      // margin-left: unset;
-    }
   }
 
   .p-header-sticky__logos {
@@ -27,10 +13,12 @@
 
     // height: 58px;
     // grid-template-rows: auto auto;
+
     gap: 6px;
     align-items: center;
     justify-content: start;
     width: 200px;
+    display: block;
 
     // 90度回転
     // transform: rotate(-90deg);
@@ -44,27 +32,23 @@
       gap: 16px;
       width: unset;
 
-      // height: 70px;
     }
   }
 
   .p-header-sticky__logo-container {
     position: relative;
-    width: 34.02px;
-    height: 480px;
+    width: $elms-width;
+    height: $logo-height;
     margin: auto;
+    display: block;
   }
 
-  .p-header-sticky__logo-dai-ichi-life-container {
-    // width: (76px * 2);
-    // margin-top: 7px;
-  }
 
   .p-header-sticky__logo {
     position: absolute;
     bottom: 0;
-    left: 34.02px;
-    width: 480px;
+    left: $elms-width;
+    width: $logo-height;
     max-width: unset;
     height: auto;
 
@@ -74,6 +58,9 @@
     /* 回転の基点を左上に設定 */
     transform-origin: top left;
     transform-origin: bottom left;
+    font-size: 40px;
+    line-height: 1;
+    width: max-content;
 
     @include mq-cdt(tablet) {
       // width: (200px * 1.5);
@@ -87,5 +74,14 @@
       width: (76px * 1.5);
       margin-top: 13px;
     }
+  }
+
+  .p-header-sticky__buttons {
+    width: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+    display: grid;
+    gap: 16px;
   }
 }
