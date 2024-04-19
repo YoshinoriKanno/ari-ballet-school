@@ -282,14 +282,10 @@ body {
   width: 200px;
   display: block;
   /* 回転の基点を左上に設定 */
-}
-@media screen and (min-width: 768px) {
-  .p-header-sticky .p-header-sticky__logos {
-    grid-template-rows: unset;
-    grid-template-columns: auto auto;
-    gap: 16px;
-    width: unset;
-  }
+  grid-template-rows: unset;
+  grid-template-columns: auto auto;
+  gap: 16px;
+  width: unset;
 }
 .p-header-sticky .p-header-sticky__logo-container {
   position: relative;

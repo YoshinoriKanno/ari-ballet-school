@@ -24,4 +24,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
     );
   });
+
+  // ページが読み込まれたときに要素を非表示にする
+  gsap.set(".p-header-sticky", { autoAlpha: 0 });
+
+  gsap.to(".p-header-sticky", {
+    scrollTrigger: {
+      trigger: "body",
+      start: "top+=100",
+      end: "top",
+      toggleActions: "play none none reverse",
+      onEnter: () => {
+        gsap.to(".p-header-sticky", { autoAlpha: 1, duration: 0.5 });  // フェードイン
+      },
+      onLeaveBack: () => {
+        gsap.to(".p-header-sticky", { autoAlpha: 0, duration: 0.5 });  // フェードアウト
+      },
+      markers: true
+    }
+  });
 });

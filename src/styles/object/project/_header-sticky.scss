@@ -26,13 +26,12 @@
     /* 回転の基点を左上に設定 */
     // transform-origin: top left;
 
-    @include mq-cdt(tablet) {
-      grid-template-rows: unset;
-      grid-template-columns: auto auto;
-      gap: 16px;
-      width: unset;
+    grid-template-rows: unset;
+    grid-template-columns: auto auto;
+    gap: 16px;
+    width: unset;
 
-    }
+    @include mq-cdt(tablet) {}
   }
 
   .p-header-sticky__logo-container {
