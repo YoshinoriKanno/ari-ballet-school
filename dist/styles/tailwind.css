@@ -526,8 +526,8 @@ video {
   position: relative;
 }
 
-.block {
-  display: block;
+.hidden {
+  display: none;
 }
 
 .grow {
