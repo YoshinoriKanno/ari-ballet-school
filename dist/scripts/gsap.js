@@ -12,35 +12,54 @@ document.addEventListener('DOMContentLoaded', (event) => {
         y: valParallax,
       },
       {
-        y: -valParallax, // y方向-に120px移動させる
-        ease: 'none', // イージングなし
+        y: -valParallax,
+        ease: 'none',
         scrollTrigger: {
-          trigger: target, // ScrollTriggerの開始位置を計算するために使用される要素
-          start: 'top bottom', // 1つ目の値がtriggerで指定した要素の開始位置　2つ目の値が画面の開始位置
-          end: 'bottom top', // 1つ目の値がtriggerで指定した要素の終了位置　2つ目の値が画面の終了位置
-          scrub: 1, // 要素を1秒遅れで追従させる
-          // markers: true, // 開始位置、終了位置を調整確認する際に使用します
+          trigger: target,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1,
         },
       }
     );
   });
 
-  // ページが読み込まれたときに要素を非表示にする
-  gsap.set(".p-header-sticky", { autoAlpha: 0 });
+  let headerTrigger = null; // ScrollTriggerのインスタンスを保持する変数
 
-  gsap.to(".p-header-sticky", {
-    scrollTrigger: {
-      trigger: "body",
-      start: "top+=100",
-      end: "top",
-      toggleActions: "play none none reverse",
-      onEnter: () => {
-        gsap.to(".p-header-sticky", { autoAlpha: 1, duration: 0.5 });  // フェードイン
-      },
-      onLeaveBack: () => {
-        gsap.to(".p-header-sticky", { autoAlpha: 0, duration: 0.5 });  // フェードアウト
-      },
-      markers: true
+  function setupAnimation() {
+    // 既存の特定のScrollTriggerインスタンスをクリーンアップ
+    if (headerTrigger) {
+      headerTrigger.kill();
     }
-  });
+
+    // デバイスの幅が768px以上の場合のみアニメーションを設定
+    if (window.innerWidth >= 768) {
+      gsap.set(".p-header-sticky", { autoAlpha: 0 });
+
+      headerTrigger = gsap.to(".p-header-sticky", {
+        scrollTrigger: {
+          trigger: "body",
+          start: "top+=100",
+          end: "top",
+          toggleActions: "play none none reverse",
+          onEnter: () => {
+            gsap.to(".p-header-sticky", { autoAlpha: 1, duration: 0.5 });
+          },
+          onLeaveBack: () => {
+            gsap.to(".p-header-sticky", { autoAlpha: 0, duration: 0.5 });
+          },
+          // markers: true
+        }
+      });
+    } else {
+      // 768px未満の場合は要素を常に表示
+      gsap.set(".p-header-sticky", { autoAlpha: 1 });
+    }
+  }
+
+  // 初期設定としてアニメーションセットアップ関数を呼び出す
+  setupAnimation();
+
+  // リサイズイベントでアニメーションセットアップを再度実行
+  window.addEventListener('resize', setupAnimation);
 });

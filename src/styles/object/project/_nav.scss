@@ -1,6 +1,12 @@
 .p-nav {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: none;
+
+  // 768px以上の場合
+  @include mq-cdt(tablet) {
+    display: block;
+  }
 
   .p-nav__lists {
     display: grid;

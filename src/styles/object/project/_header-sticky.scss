@@ -50,29 +50,14 @@
     width: $logo-height;
     max-width: unset;
     height: auto;
-
-    // 90度回転
     transform: rotate(-90deg);
-
-    /* 回転の基点を左上に設定 */
     transform-origin: top left;
     transform-origin: bottom left;
     font-size: 40px;
     line-height: 1;
     width: max-content;
 
-    @include mq-cdt(tablet) {
-      // width: (200px * 1.5);
-    }
-  }
-
-  .p-header-sticky__logo-dai-ichi-life {
-    width: 76px;
-
-    @include mq-cdt(tablet) {
-      width: (76px * 1.5);
-      margin-top: 13px;
-    }
+    @include mq-cdt(tablet) {}
   }
 
   .p-header-sticky__buttons {

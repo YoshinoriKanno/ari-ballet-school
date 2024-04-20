@@ -302,21 +302,11 @@ body {
   max-width: unset;
   height: auto;
   transform: rotate(-90deg);
-  /* 回転の基点を左上に設定 */
   transform-origin: top left;
   transform-origin: bottom left;
   font-size: 40px;
   line-height: 1;
   width: max-content;
-}
-.p-header-sticky .p-header-sticky__logo-dai-ichi-life {
-  width: 76px;
-}
-@media screen and (min-width: 768px) {
-  .p-header-sticky .p-header-sticky__logo-dai-ichi-life {
-    width: 114px;
-    margin-top: 13px;
-  }
 }
 .p-header-sticky .p-header-sticky__buttons {
   width: 24px;
@@ -537,6 +527,12 @@ body {
 .p-nav {
   padding-top: 32px;
   padding-bottom: 32px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .p-nav {
+    display: block;
+  }
 }
 .p-nav .p-nav__lists {
   display: grid;
