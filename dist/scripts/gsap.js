@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
           end: "top",
           toggleActions: "play none none reverse",
           onEnter: () => {
-            gsap.to(".p-header-sticky", { autoAlpha: 1, duration: 0.5 });
+            gsap.to(".p-header-sticky", { autoAlpha: 1, duration: 1 });
           },
           onLeaveBack: () => {
-            gsap.to(".p-header-sticky", { autoAlpha: 0, duration: 0.5 });
+            gsap.to(".p-header-sticky", { autoAlpha: 0, duration: .5 });
           },
           // markers: true
         }
