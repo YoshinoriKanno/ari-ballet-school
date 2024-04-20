@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+  // Hero のロゴのアニメーション ==============================
+  gsap.registerPlugin(ScrollTrigger);
+
+  const paths = document.querySelectorAll('.cls-1');
+  paths.forEach((path, index) => {
+    // 初期状態を設定
+    gsap.set(path, { opacity: 0 });
+
+    // アニメーションを設定
+    gsap.to(path, {
+      opacity: 0.35, // 目標の不透明度
+      duration: 1,   // アニメーションの持続時間
+      delay: index * 0.1, // 各文字のアニメーション開始タイミングをずらす
+      ease: "power1.out" // イージング関数
+    });
+  });
+  // / Hero のロゴのアニメーション ==============================
   // 画像のパララックス ==============================
-  const targets = document.querySelectorAll('.gsap-paralax-image');
   const valParallax = 60;
   targets.forEach((target) => {
     gsap.set(target.querySelector('.p-hero__image'), {

@@ -67,6 +67,7 @@
 
 .l-header-sticky {
   position: fixed;
+  position: absolute;
   left: 50%;
   z-index: 3;
   width: math.div(1, 12) * 100vw;

@@ -526,10 +526,6 @@ video {
   position: relative;
 }
 
-.block {
-  display: block;
-}
-
 .grow {
   flex-grow: 1;
 }
