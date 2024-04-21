@@ -3,3 +3,60 @@
   padding-left: math.div(1vw, 12) * 100;
   margin-left: math.div(2vw, 12) * 100;
 }
+
+.p-header-sticky__button {
+  position: absolute;
+  right: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+}
+
+.p-header-sticky__button .p-header-sticky__button-bar {
+  /* アニメーションの設定 */
+  position: absolute;
+  left: (14px + 2);
+  display: inline-block;
+  width: 50%;
+  height: 1px;
+  background: rgb(255 255 255 / 65%);
+  transition: all 0.4s;
+}
+
+.p-header-sticky__button .p-header-sticky__button-bar:nth-of-type(1) {
+  top: 18px;
+}
+
+.p-header-sticky__button .p-header-sticky__button-bar:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.p-header-sticky__button .p-header-sticky__button-bar:nth-of-type(3) {
+  bottom: 18px;
+}
+
+/* activeクラスが付与されると線が回転して×に */
+
+.p-header-sticky__button.is-active .p-header-sticky__button-bar:nth-of-type(1) {
+  top: 16.5px;
+  left: 16.5px;
+  width: 50%;
+  transform: translateY(12px) rotate(-45deg);
+}
+
+.p-header-sticky__button.is-active .p-header-sticky__button-bar:nth-of-type(2) {
+  opacity: 0;
+
+  /* 真ん中の線は透過 */
+}
+
+.p-header-sticky__button.is-active .p-header-sticky__button-bar:nth-of-type(3) {
+  bottom: 16.5px;
+  left: 16.5px;
+  width: 50%;
+  transform: translateY(-12px) rotate(45deg);
+}

@@ -49,6 +49,12 @@
   </head>
 
   <body style="position: relative">
+    <div style="z-index: 10; right: 16px; top: 16px; position: fixed">
+      <div class="p-header-sticky__button js-toggle-hamburger">
+        <span class="p-header-sticky__button-bar"></span><span class="p-header-sticky__button-bar"></span><span class="p-header-sticky__button-bar"></span>
+      </div>
+    </div>
+
     <section class="p-hero">
       <img src="images/hero.webp" alt="" width="2880" height="3840" class="p-hero__image" />
       <svg id="" data-name="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.27 178.24" class="p-hero__logo">
@@ -124,9 +130,6 @@
               </a>
               <ul class="p-header-sticky__buttons">
                 <li>
-                  <span class="js-toggle-hamburger" style="z-index: 10; position: relative"><img src="images/bars-solid.svg" alt="" width="448" height="512" /></span>
-                </li>
-                <li>
                   <a href=""><img src="images/instagram.svg" alt="" width="448" height="512" /></a>
                 </li>
                 <li>
@@ -170,18 +173,8 @@
                   </ul>
                   <ul class="p-header-sticky__buttons">
                     <li>
-                      <span class="js-toggle-hamburger" style="z-index: 10; position: relative"
-                        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                          <path
-                            class="svg-icon-xmark-solid"
-                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-                          /></svg
-                      ></span>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                           <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                           <path
                             class="svg-icon-instagram"
@@ -191,14 +184,15 @@
                       </a>
                     </li>
                     <li>
-                      <a href=""
-                        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                           <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                           <path
                             class="svg-icon-envelope"
                             d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                          /></svg
-                      ></a>
+                          />
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -273,7 +267,6 @@
 
       <div class="l-side-bg"></div>
     </div>
-    <div style="height: 10000px"></div>
 
     <!-- ローディング画面 -->
     <div id="loading">
