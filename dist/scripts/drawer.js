@@ -30,13 +30,18 @@ const drawer = () => {
 
   menuItems.forEach((item) => {
     item.addEventListener('click', () => {
-      hideNav();
+      toggleNav();
     });
   });
 
   openDrawer.addEventListener('click', () => {
     toggleNav();
   });
+
+  nav.addEventListener('click', () => {
+    toggleNav();
+  });
+
   // リサイズ時にナビゲーションを閉じる
   window.addEventListener('resize', () => {
     hideNav();

@@ -52,8 +52,6 @@ body {
 
 .l-main-content {
   width: 100%;
-  background-image: url('../images/bgi.png');
-  background-size: 160px;
 }
 
 @media screen and (width >= 768px) {
@@ -508,7 +506,7 @@ body {
 }
 .p-nav .p-nav__lists {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   justify-content: start;
 }
 .p-nav .p-nav__list {
@@ -556,7 +554,6 @@ body {
   text-align: center;
   visibility: hidden;
   background-color: rgb(0 0 0 / 80%);
-  background-image: url('../images/bgi.png');
   background-size: 160px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out, visibility 0.2s linear;
@@ -579,6 +576,7 @@ body {
 }
 .p-nav-full-screen .nuv-menus {
   padding: 32px 20px;
+  text-align: left;
 }
 
 @media screen and (width >= 768px) {
@@ -588,7 +586,29 @@ body {
   }
 }
 .p-nav-full-screen .nuv-menu {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 8px;
   margin-bottom: 32px;
+}
+.p-nav-full-screen .nuv-menu::before,
+.p-nav-full-screen .nuv-menu::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  content: '';
+  background-color: rgb(255 255 255);
+  transition: width 0.2s ease-out;
+}
+.p-nav-full-screen .nuv-menu::before {
+  width: 100%;
+  background-color: rgb(255 255 255 / 25%);
+}
+.p-nav-full-screen .nuv-menu:hover::after {
+  width: 100%;
 }
 
 @media screen and (width >= 768px) {
@@ -606,59 +626,19 @@ body {
   position: relative;
   display: block;
 }
-
-@media screen and (width >= 768px) {
-  .p-nav-full-screen .nuv-menu-anchor:hover::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -16px;
-    width: 12px;
-    height: 12px;
-    margin-top: auto;
-    margin-bottom: auto;
-    content: '';
-    background-color: #fff100;
-    border-radius: 9999px;
-  }
-}
-
-@media screen and (width >= 1024px) {
-  .p-nav-full-screen .nuv-menu-anchor:hover::before {
-    left: -32px;
-  }
-}
-
-@media screen and (width >= 768px) {
-  .p-nav-full-screen .nuv-menu-anchor.current::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -16px;
-    width: 12px;
-    height: 12px;
-    margin-top: auto;
-    margin-bottom: auto;
-    content: '';
-    background-color: #c11920;
-    border-radius: 9999px;
-  }
-}
-
-@media screen and (width >= 1024px) {
-  .p-nav-full-screen .nuv-menu-anchor.current::before {
-    left: -32px;
-  }
-}
 .p-nav-full-screen .nuv-menu-title {
   font-size: 18px;
-  font-weight: bold;
 }
 
 @media screen and (width >= 1440px) {
   .p-nav-full-screen .nuv-menu-title {
     font-size: 22px;
   }
+}
+.p-nav-full-screen .svg-icon-instagram,
+.p-nav-full-screen .svg-icon-envelope,
+.p-nav-full-screen .svg-icon-xmark-solid {
+  fill: white;
 }
 
 .p-main {

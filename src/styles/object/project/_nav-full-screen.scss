@@ -16,7 +16,6 @@
   text-align: center;
   visibility: hidden;
   background-color: rgb(0 0 0 / 80%);
-  background-image: url('../images/bgi.png');
   background-size: 160px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out, visibility 0.2s linear;
@@ -39,6 +38,7 @@
 
   .nuv-menus {
     padding: 32px 20px;
+    text-align: left;
 
     @include mq-cdt(tablet) {
       height: unset;
@@ -47,7 +47,34 @@
   }
 
   .nuv-menu {
+    position: relative;
+    width: fit-content;
+    padding-bottom: 8px;
     margin-bottom: 32px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 0%;
+      height: 1px;
+      content: '';
+      background-color: rgb(255 255 255 / 100%);
+      transition: width 0.2s ease-out; // アニメーションの適用
+    }
+
+    &::before {
+      width: 100%;
+      background-color: rgb(255 255 255 / 25%);
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
 
     @include mq-cdt(tablet) {
       margin-bottom: 16px;
@@ -62,58 +89,19 @@
     // margin-bottom: 32px;
     position: relative;
     display: block;
-
-    &:hover {
-      &::before {
-        @include mq-cdt(tablet) {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: -16px;
-          width: 12px;
-          height: 12px;
-          margin-top: auto;
-          margin-bottom: auto;
-          content: '';
-          background-color: $color-secondary;
-          border-radius: 9999px;
-        }
-
-        @include mq-cdt(laptop) {
-          left: -32px;
-        }
-      }
-    }
-
-    &.current {
-      &::before {
-        @include mq-cdt(tablet) {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: -16px;
-          width: 12px;
-          height: 12px;
-          margin-top: auto;
-          margin-bottom: auto;
-          content: '';
-          background-color: $color-primary;
-          border-radius: 9999px;
-        }
-
-        @include mq-cdt(laptop) {
-          left: -32px;
-        }
-      }
-    }
   }
 
   .nuv-menu-title {
     font-size: 18px;
-    font-weight: bold;
 
     @include mq-cdt(laptop-l) {
       font-size: 22px;
     }
+  }
+
+  .svg-icon-instagram,
+  .svg-icon-envelope,
+  .svg-icon-xmark-solid {
+    fill: white;
   }
 }
