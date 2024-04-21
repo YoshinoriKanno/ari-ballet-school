@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
   // / Hero のロゴのアニメーション ==============================
-  // Hero アニメーション ==============================
+  // Hero のスクロールトリミング ==============================
   // GSAPのタイムラインを作成
   const timeline = gsap.timeline({
     scrollTrigger: {
@@ -41,5 +41,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
       ease: 'none', // アニメーションのイージング設定（一定速度）
     }
   );
-  // / Hero アニメーション ==============================
+  // / Hero のスクロールトリミング ==============================
+  // Header のスタイル制御 ==============================
+  const header = document.querySelector('.p-header-sticky');
+
+  ScrollTrigger.create({
+    trigger: header,
+    start: 'top top', // .p-header-stickyの上端がビューポートの上端に達したとき
+    endTrigger: 'html', // ページの最下部まで
+    end: 'bottom bottom', // ページの最下部がビューポートの最下部に達したとき
+    // markers: true, // 開発用のマーカー表示（本番では削除推奨）
+
+    onEnter: () => {
+      header.style.position = 'fixed';
+      header.style.top = '0';
+      // header.style.width = '100%'; // 必要に応じて追加
+    },
+    onLeaveBack: () => {
+      header.style.position = 'absolute';
+      header.style.top = '';
+    },
+    // markers: true // 開発時はマーカーを表示して調整、本番環境では削除
+  });
+  // / Header のスタイル制御 ==============================
 });

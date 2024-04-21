@@ -376,67 +376,19 @@ body {
   display: grid;
   width: 100vw;
   height: 100dvh;
-  background-color: #c11920;
+  background-color: black;
   transition: all 1s;
 }
-
-.loader,
-.loader::before,
-.loader::after {
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 50%;
-  animation: load7 1.8s infinite ease-in-out;
-  animation-fill-mode: both;
-}
-
-.loader {
-  position: relative;
-  margin: auto;
-  font-size: 10px;
-  color: #fff;
-  text-indent: -9999em;
-  transform: translateZ(0);
-  animation-delay: -0.16s;
-}
-
-.loader::before,
-.loader::after {
+#loading .loading__logo {
   position: absolute;
   top: 0;
-  content: '';
+  bottom: 0;
+  left: 32px;
+  width: 640px;
+  margin: auto;
+  opacity: 0.1;
 }
 
-.loader::before {
-  left: -3.5em;
-  animation-delay: -0.32s;
-}
-
-.loader::after {
-  left: 3.5em;
-}
-
-@keyframes load7 {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 2.5em 0 -1.3em;
-  }
-  40% {
-    box-shadow: 0 2.5em 0 0;
-  }
-}
-
-@keyframes load7 {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 2.5em 0 -1.3em;
-  }
-  40% {
-    box-shadow: 0 2.5em 0 0;
-  }
-}
 .loaded {
   visibility: hidden;
   opacity: 0;
