@@ -1,0 +1,119 @@
+.js-toggle-hamburger {
+  cursor: pointer;
+}
+
+.p-nav-full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+  background-color: rgb(0 0 0 / 80%);
+  background-image: url('../images/bgi.png');
+  background-size: 160px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s linear;
+
+  &.is-show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nuv-body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 58px);
+
+    @include mq-cdt(tablet) {
+      height: unset;
+    }
+  }
+
+  .nuv-menus {
+    padding: 32px 20px;
+
+    @include mq-cdt(tablet) {
+      height: unset;
+      padding: unset;
+    }
+  }
+
+  .nuv-menu {
+    margin-bottom: 32px;
+
+    @include mq-cdt(tablet) {
+      margin-bottom: 16px;
+    }
+
+    @include mq-cdt(laptop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .nuv-menu-anchor {
+    // margin-bottom: 32px;
+    position: relative;
+    display: block;
+
+    &:hover {
+      &::before {
+        @include mq-cdt(tablet) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -16px;
+          width: 12px;
+          height: 12px;
+          margin-top: auto;
+          margin-bottom: auto;
+          content: '';
+          background-color: $color-secondary;
+          border-radius: 9999px;
+        }
+
+        @include mq-cdt(laptop) {
+          left: -32px;
+        }
+      }
+    }
+
+    &.current {
+      &::before {
+        @include mq-cdt(tablet) {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -16px;
+          width: 12px;
+          height: 12px;
+          margin-top: auto;
+          margin-bottom: auto;
+          content: '';
+          background-color: $color-primary;
+          border-radius: 9999px;
+        }
+
+        @include mq-cdt(laptop) {
+          left: -32px;
+        }
+      }
+    }
+  }
+
+  .nuv-menu-title {
+    font-size: 18px;
+    font-weight: bold;
+
+    @include mq-cdt(laptop-l) {
+      font-size: 22px;
+    }
+  }
+}

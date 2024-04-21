@@ -363,7 +363,7 @@ body {
   top: 0;
   bottom: 0;
   left: 32px;
-  width: 640px;
+  width: 44.4444444444vw;
   margin: auto;
 }
 
@@ -384,7 +384,7 @@ body {
   top: 0;
   bottom: 0;
   left: 32px;
-  width: 640px;
+  width: 44.4444444444vw;
   margin: auto;
   opacity: 0.1;
 }
@@ -538,6 +538,129 @@ body {
   width: 100%;
 }
 
+.js-toggle-hamburger {
+  cursor: pointer;
+}
+
+.p-nav-full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  visibility: hidden;
+  background-color: rgb(0 0 0 / 80%);
+  background-image: url('../images/bgi.png');
+  background-size: 160px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s linear;
+}
+.p-nav-full-screen.is-show {
+  visibility: visible;
+  opacity: 1;
+}
+.p-nav-full-screen .nuv-body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 58px);
+}
+
+@media screen and (width >= 768px) {
+  .p-nav-full-screen .nuv-body {
+    height: unset;
+  }
+}
+.p-nav-full-screen .nuv-menus {
+  padding: 32px 20px;
+}
+
+@media screen and (width >= 768px) {
+  .p-nav-full-screen .nuv-menus {
+    height: unset;
+    padding: unset;
+  }
+}
+.p-nav-full-screen .nuv-menu {
+  margin-bottom: 32px;
+}
+
+@media screen and (width >= 768px) {
+  .p-nav-full-screen .nuv-menu {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .p-nav-full-screen .nuv-menu {
+    margin-bottom: 32px;
+  }
+}
+.p-nav-full-screen .nuv-menu-anchor {
+  position: relative;
+  display: block;
+}
+
+@media screen and (width >= 768px) {
+  .p-nav-full-screen .nuv-menu-anchor:hover::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -16px;
+    width: 12px;
+    height: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: '';
+    background-color: #fff100;
+    border-radius: 9999px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .p-nav-full-screen .nuv-menu-anchor:hover::before {
+    left: -32px;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .p-nav-full-screen .nuv-menu-anchor.current::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -16px;
+    width: 12px;
+    height: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: '';
+    background-color: #c11920;
+    border-radius: 9999px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .p-nav-full-screen .nuv-menu-anchor.current::before {
+    left: -32px;
+  }
+}
+.p-nav-full-screen .nuv-menu-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media screen and (width >= 1440px) {
+  .p-nav-full-screen .nuv-menu-title {
+    font-size: 22px;
+  }
+}
+
 .p-main {
   padding-right: 8.3333333333vw;
   padding-left: 8.3333333333vw;
@@ -609,4 +732,27 @@ body {
   100% {
     bottom: 105px;
   }
+}
+.u-scroll-spacing {
+  display: block;
+  height: 58px;
+  margin-top: -58px;
+}
+
+@media screen and (width >= 768px) {
+  .u-scroll-spacing {
+    height: unset;
+    margin-top: unset;
+  }
+}
+
+.is-fixed {
+  overflow-y: hidden;
+}
+
+.u-tate-cho {
+  position: relative;
+  right: 1px;
+  display: inline-block;
+  rotate: 90deg;
 }
