@@ -1,18 +1,11 @@
 .p-hero {
-  height: math.div((1320vw - 300), 1440) * 100;
-  margin-right: math.div(-1vw, 12) * 100;
-  overflow: hidden;
   position: relative;
   z-index: 1;
-  height: 100dvh;
   width: 100%;
-
-  @media screen and (width >=1440px) {
-    height: (1320px - 300);
-    margin-right: -120px;
-  }
-
-
+  height: math.div((1320vw - 300), 1440) * 100;
+  height: 100dvh;
+  margin-right: math.div(-1vw, 12) * 100;
+  overflow: hidden;
 
   .p-hero__image-wrapper {
     height: math.div(1320vw, 1440) * 100;
@@ -27,9 +20,6 @@
     object-fit: cover;
     width: 100%;
     height: 100dvh;
-
-
-
   }
 
   .p-hero__logo {

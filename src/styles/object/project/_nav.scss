@@ -1,7 +1,7 @@
 .p-nav {
+  display: none;
   padding-top: 32px;
   padding-bottom: 32px;
-  display: none;
 
   // 768px以上の場合
   @include mq-cdt(tablet) {

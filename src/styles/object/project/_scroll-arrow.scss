@@ -4,6 +4,7 @@
   position: fixed;
   right: 16px;
   bottom: 0;
+
   // left: 0;
   z-index: 2;
   display: grid;
@@ -14,9 +15,10 @@
   // display: none;
   // margin-left: 390px;
   font-size: 18px;
+
   // font-weight: bold;
   line-height: 1;
-  color: rgba(255, 255, 255, .65);
+  color: rgb(255 255 255 / 65%);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   animation: arrowmove 3s ease-in-out infinite;
@@ -38,7 +40,7 @@
     height: 20px;
     margin-left: 3px;
     content: '';
-    background-color: rgba(255, 255, 255, .65);
+    background-color: rgb(255 255 255 / 65%);
     rotate: 20deg;
   }
 
@@ -53,7 +55,7 @@
     margin-right: auto;
     margin-left: auto;
     content: '';
-    background-color: rgba(255, 255, 255, .65);
+    background-color: rgb(255 255 255 / 65%);
   }
 
   @include mq-cdt(tablet) {
