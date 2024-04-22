@@ -55,13 +55,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: math.div(2, 12) * 100vw;
+    width: math.div(2, 24) * 100vw;
     height: 100vh;
     background-color: white;
   }
 
   @include mq-cdt(laptop-l) {
-    width: calc(240px + (100vw - 1440px) * 0.5);
+    width: calc(128px + (100vw - 1440px) * 0.5);
   }
 }
 
@@ -74,31 +74,31 @@
     z-index: 3;
     display: block;
     width: math.div(1, 12) * 100vw;
-    margin-left: calc(-5vw / 12 * 100 + -0.5vw / 12 * 100);
+    margin-left: calc(-6vw / 12 * 100);
   }
 
   @include mq-cdt(tablet) {
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
 
   @include mq-cdt(laptop-l) {
     width: 120px;
-    margin-left: -660px;
+    margin-left: -720px;
   }
 }
 
 .l-base {
-  padding-right: math.div(1vw, 12) * 100;
-  padding-left: math.div(1vw, 12) * 100;
+  padding-right: math.div(1vw, 24) * 100;
+  padding-left: math.div(1vw, 24) * 100;
 
   @include mq-cdt(tablet) {
-    margin-left: math.div(2vw, 12) * 100;
+    margin-left: math.div(2vw, 24) * 100;
   }
 
   @include mq-cdt(laptop-l) {
-    padding-right: 120px;
-    padding-left: 120px;
-    margin-left: 240px;
+    padding-right: 64px;
+    padding-left: 64px;
+    margin-left: 128px;
   }
 }
 

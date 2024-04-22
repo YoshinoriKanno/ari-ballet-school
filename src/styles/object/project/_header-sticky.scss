@@ -1,6 +1,6 @@
 .p-header-sticky {
   $elms-width: 40px;
-  $logo-height: 326.66px;
+  $logo-height: 342.484px;
 
   .p-header-sticky__container {
     padding-top: 32px;
@@ -47,6 +47,7 @@
     max-width: unset;
     height: auto;
     font-size: 40px;
+    font-weight: 100;
     line-height: 1;
     transform: rotate(-90deg);
     transform-origin: top left;
