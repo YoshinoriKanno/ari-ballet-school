@@ -534,6 +534,10 @@ video {
   position: relative;
 }
 
+.table {
+  display: table;
+}
+
 .grow {
   flex-grow: 1;
 }

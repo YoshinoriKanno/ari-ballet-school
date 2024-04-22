@@ -1,0 +1,63 @@
+.a-studio {
+  margin-top: 96px;
+
+  .a-studio__grid {
+    display: grid;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+
+    @include mq-cdt(tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+  }
+
+  .a-studio__paragraph {
+    margin-top: 12px;
+  }
+
+  .a-studio__map-container {
+    position: relative;
+    width: 100%;
+
+    /* 16:9 アスペクト比 */
+    height: 0;
+    padding-bottom: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .a-studio__fee {
+    // background-color: rgba(255, 255, 255, .1);
+    // padding: 16px;
+
+    @include mq-cdt(tablet) {
+      // padding: 32px;
+    }
+  }
+
+  .a-studio__address {
+    font-size: 14px;
+  }
+
+  .a-studio__fee-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  td {
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    font-size: 14px;
+    line-height: 1;
+    border-bottom: 1px solid rgb(255 255 255 / 35%);
+  }
+}

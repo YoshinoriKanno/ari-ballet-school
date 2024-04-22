@@ -1,0 +1,29 @@
+.a-profile {
+  margin-top: 96px;
+
+  .a-profile__grid {
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    margin-top: 32px;
+
+    @include mq-cdt(tablet) {
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+    }
+  }
+
+  .a-profile__image {
+    max-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .a-profile__name {
+    font-size: 24px;
+  }
+
+  .a-profile__paragraph {
+    margin-top: 12px;
+  }
+}
