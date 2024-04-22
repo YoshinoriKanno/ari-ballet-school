@@ -64,4 +64,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // markers: true // 開発時はマーカーを表示して調整、本番環境では削除
   });
   // / Header のスタイル制御 ==============================
+  // リサイズイベントの処理
+  window.addEventListener('resize', () => {
+    ScrollTrigger.refresh(); // トリガーとアニメーションを再計算
+  });
 });

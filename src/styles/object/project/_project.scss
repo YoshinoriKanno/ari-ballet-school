@@ -4,6 +4,18 @@
   margin-left: math.div(2vw, 12) * 100;
 }
 
+.p-header-sticky__button-container {
+  position: fixed;
+  top: 0;
+  right: 4px;
+  z-index: 10;
+
+  @include mq-cdt(tablet) {
+    top: 8px;
+    right: 24px;
+  }
+}
+
 .p-header-sticky__button {
   position: absolute;
   right: 0;

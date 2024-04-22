@@ -11,7 +11,7 @@
     height: math.div(1320vw, 1440) * 100;
     overflow: hidden;
 
-    @media screen and (width >=1440px) {
+    @include mq-cdt(laptop-l) {
       height: 1320px;
     }
   }

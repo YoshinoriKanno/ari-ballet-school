@@ -10,16 +10,20 @@
 
   .p-nav__lists {
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(3, auto);
+    gap: 24px;
     justify-content: start;
-  }
 
-  .p-nav__list {
-    margin-right: 1.5em;
+    // 1440px以上の場合
+    @include mq-cdt(laptop-l) {
+      grid-template-columns: repeat(6, auto);
+      gap: 16px;
+    }
   }
 
   .p-nav__link {
     position: relative;
+    display: block;
     padding-bottom: 8px;
 
     &::before,

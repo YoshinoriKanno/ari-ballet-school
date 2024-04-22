@@ -29,28 +29,20 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 58px);
-
-    @include mq-cdt(tablet) {
-      height: unset;
-    }
   }
 
   .nuv-menus {
-    padding: 32px 20px;
     text-align: left;
-
-    @include mq-cdt(tablet) {
-      height: unset;
-      padding: unset;
-    }
   }
 
   .nuv-menu {
     position: relative;
-    width: fit-content;
     padding-bottom: 8px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+
+    @include mq-cdt(laptop) {
+      margin-bottom: 32px;
+    }
 
     &::before,
     &::after {
@@ -75,14 +67,6 @@
         width: 100%;
       }
     }
-
-    @include mq-cdt(tablet) {
-      margin-bottom: 16px;
-    }
-
-    @include mq-cdt(laptop) {
-      margin-bottom: 32px;
-    }
   }
 
   .nuv-menu-anchor {
@@ -103,5 +87,28 @@
   .svg-icon-envelope,
   .svg-icon-xmark-solid {
     fill: white;
+  }
+
+  .p-nav-full-screen__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 16px;
+    align-items: center;
+    margin-top: 16px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .p-nav-full-screen__button {
+    width: 24px;
+  }
+
+  .p-nav-full-screen__site-name {
+    margin-bottom: 16px;
+    font-size: 24px;
+
+    @include mq-cdt(tablet) {
+      margin-bottom: 32px;
+    }
   }
 }
