@@ -542,6 +542,10 @@ video {
   resize: both;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .no-underline {
   text-decoration-line: none;
 }

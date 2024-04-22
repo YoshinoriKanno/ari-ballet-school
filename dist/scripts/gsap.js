@@ -64,6 +64,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // markers: true // 開発時はマーカーを表示して調整、本番環境では削除
   });
   // / Header のスタイル制御 ==============================
+
+  // ナビゲーションリストのアニメーション ==============================
+  const navLists = document.querySelectorAll('.p-nav__list');
+  navLists.forEach((list, index) => {
+    gsap.from(list, {
+      opacity: 0, // 開始時の透明度
+      x: 100, // 開始時の水平位置（右から左への移動のため正の値を指定）
+      duration: 0.5, // アニメーションの持続時間
+      delay: index * 0.2, // 各要素のアニメーション開始タイミングをずらす
+      ease: 'power1.out', // イージング関数
+      scrollTrigger: {
+        trigger: list, // トリガーとなる要素（各リスト項目）
+        start: 'top 80%', // ビューポートの上端から80%の位置でトリガー
+        toggleActions: 'play none none none', // スクロール時のアクション：表示時に再生
+      },
+    });
+  });
+  // / ナビゲーションリストのアニメーション ==============================
   // リサイズイベントの処理
   window.addEventListener('resize', () => {
     ScrollTrigger.refresh(); // トリガーとアニメーションを再計算
