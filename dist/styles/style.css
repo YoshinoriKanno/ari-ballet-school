@@ -145,13 +145,32 @@ body {
   margin-left: -4.1666666667vw;
 }
 .l-negative.l-negative--parallax {
-  height: 50dvh;
+  height: 120px;
   overflow: hidden;
 }
-.l-negative.l-negative--parallax img {
-  width: auto;
-  height: calc(50dvh + 100px);
-  object-fit: cover;
+
+@media screen and (width >= 375px) {
+  .l-negative.l-negative--parallax {
+    height: 170px;
+  }
+}
+
+@media screen and (width >= 425px) {
+  .l-negative.l-negative--parallax {
+    height: 210px;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .l-negative.l-negative--parallax {
+    height: 310px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .l-negative.l-negative--parallax {
+    height: 560px;
+  }
 }
 
 @media screen and (width >= 1440px) {

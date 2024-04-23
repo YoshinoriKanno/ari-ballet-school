@@ -107,13 +107,23 @@
   margin-left: math.div(-1vw, 24) * 100;
 
   &.l-negative--parallax {
-    height: 50dvh;
+    height: 120px;
     overflow: hidden;
 
-    img {
-      width: auto;
-      height: calc(50dvh + 100px);
-      object-fit: cover;
+    @include mq-cdt(mobile-m) {
+      height: 170px;
+    }
+
+    @include mq-cdt(mobile-l) {
+      height: 210px;
+    }
+
+    @include mq-cdt(tablet) {
+      height: 310px;
+    }
+
+    @include mq-cdt(laptop) {
+      height: 560px;
     }
   }
 
