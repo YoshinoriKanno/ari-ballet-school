@@ -24,25 +24,27 @@
 // Component
 // -----------------------------------------------------------------
 
-@import 'object/component/cta';
 @import 'object/component/button';
+@import 'object/component/component';
+@import 'object/component/cta';
 @import 'object/component/heading';
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@import 'object/project/a-profile';
-@import 'object/project/a-studio';
 @import 'object/project/header-sticky';
 @import 'object/project/hero';
+@import 'object/project/kids-classes';
 @import 'object/project/loading';
 @import 'object/project/masthead';
 @import 'object/project/nav';
 @import 'object/project/nav-full-screen';
+@import 'object/project/profile';
 @import 'object/project/project';
 @import 'object/project/scroll-arrow';
 @import 'object/project/scroll-to-top';
+@import 'object/project/studio';
 
 // -----------------------------------------------------------------
 // Utility

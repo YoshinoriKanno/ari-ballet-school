@@ -82,6 +82,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
   // / ナビゲーションリストのアニメーション ==============================
+
+  //  画像に対してパララックス効果を適用 ==============================
+  // 各'.l-negative'クラスを持つ要素に対してパララックス効果を適用
+  const images = document.querySelectorAll('.l-negative--parallax img');
+
+  images.forEach((img) => {
+    gsap.fromTo(
+      img,
+      { y: -100 }, // 開始時の位置（上に50pxずらす）
+      {
+        y: 0, // 終了時の位置（下に50pxずらす）
+        scrollTrigger: {
+          trigger: img.parentNode, // トリガーとなる要素
+          start: 'top bottom', // 要素の上端がビューポートの下端に達したときに開始
+          end: 'bottom top', // 要素の下端がビューポートの上端に達したときに終了
+          scrub: true, // スクロール位置に応じてアニメーションをスムーズに更新
+          markers: true, // 開発用のマーカー表示（本番では削除推奨）
+        },
+      }
+    );
+  });
+  // / 画像に対してパララックス効果を適用 ==============================
+
   // リサイズイベントの処理
   window.addEventListener('resize', () => {
     ScrollTrigger.refresh(); // トリガーとアニメーションを再計算

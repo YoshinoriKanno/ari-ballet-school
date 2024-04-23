@@ -1,11 +1,8 @@
-.a-studio {
-  margin-top: 96px;
-
-  .a-studio__grid {
+.p-studio {
+  .p-studio__grid {
     display: grid;
     gap: 16px;
     justify-content: center;
-    margin-top: 32px;
 
     @include mq-cdt(tablet) {
       grid-template-columns: 1fr 1fr;
@@ -13,11 +10,11 @@
     }
   }
 
-  .a-studio__paragraph {
+  .p-studio__paragraph {
     margin-top: 12px;
   }
 
-  .a-studio__map-container {
+  .p-studio__map-container {
     position: relative;
     width: 100%;
 
@@ -34,29 +31,40 @@
     }
   }
 
-  .a-studio__fee {
+  .p-studio__rental {
+    padding-top: 32px;
+
     // background-color: rgba(255, 255, 255, .1);
     // padding: 16px;
+    margin-top: 32px;
+    border-top: 1px solid rgb(255 255 255 / 35%);
+  }
+
+  .p-studio__fee {
+    margin-top: 32px;
 
     @include mq-cdt(tablet) {
-      // padding: 32px;
+      // padding: 16px 0;
     }
   }
 
-  .a-studio__address {
-    font-size: 14px;
+  .p-studio__address {
+    // font-size: 14px;
   }
 
-  .a-studio__fee-title {
-    font-size: 24px;
+  .p-studio__fee-table-container {
+    display: table;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-top: 16px;
+    background-color: rgb(255 255 255 / 15%);
   }
 
   td {
-    padding-top: 8px;
-    padding-right: 8px;
-    padding-bottom: 8px;
+    padding: 8px;
     font-size: 14px;
     line-height: 1;
-    border-bottom: 1px solid rgb(255 255 255 / 35%);
+
+    // border-bottom: 1px solid rgb(255 255 255 / 35%);
   }
 }

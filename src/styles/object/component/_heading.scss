@@ -1,4 +1,5 @@
-.c-heading {
+.c-heading-h2 {
+  margin-bottom: 64px;
   font-size: 30px;
   font-weight: 100;
   line-height: 1;
@@ -6,4 +7,16 @@
   @include mq-cdt(tablet) {
     font-size: 64px;
   }
+}
+
+.c-heading-h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.c-heading-h4 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1;
 }

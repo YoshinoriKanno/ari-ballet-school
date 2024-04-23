@@ -1,0 +1,12 @@
+.c-classes__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.c-classes__card {
+  padding: 32px;
+  background-color: rgb(255 255 255 / 10%);
+
+  // border: 10px solid rgba(255, 255, 255, .05);
+}
