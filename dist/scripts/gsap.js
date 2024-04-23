@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           start: 'top bottom', // 要素の上端がビューポートの下端に達したときに開始
           end: 'bottom top', // 要素の下端がビューポートの上端に達したときに終了
           scrub: true, // スクロール位置に応じてアニメーションをスムーズに更新
-          markers: true, // 開発用のマーカー表示（本番では削除推奨）
+          // markers: true, // 開発用のマーカー表示（本番では削除推奨）
         },
       }
     );
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // / 画像に対してパララックス効果を適用 ==============================
 
   // リサイズイベントの処理
-  window.addEventListener('resize', () => {
-    ScrollTrigger.refresh(); // トリガーとアニメーションを再計算
-  });
+  // window.addEventListener('resize', () => {
+  //   ScrollTrigger.refresh(); // トリガーとアニメーションを再計算
+  // });
 });
