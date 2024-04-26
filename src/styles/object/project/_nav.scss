@@ -1,11 +1,17 @@
 .p-nav {
   display: none;
-  padding-top: 32px;
+  padding-top: 128px;
   padding-bottom: 32px;
+  font-weight: 400;
 
   // 768px以上の場合
   @include mq-cdt(tablet) {
     display: block;
+  }
+
+  // 1024px以上の場合
+  @include mq-cdt(laptop) {
+    font-size: 18px;
   }
 
   .p-nav__lists {
@@ -14,8 +20,8 @@
     gap: 24px;
     justify-content: start;
 
-    // 1440px以上の場合
-    @include mq-cdt(laptop-l) {
+    // 1024px以上の場合
+    @include mq-cdt(laptop) {
       grid-template-columns: repeat(6, auto);
       gap: 16px;
     }

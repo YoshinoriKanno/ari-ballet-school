@@ -74,10 +74,21 @@
 }
 
 .p-concept,
-.p-kids-classes,
-.p-adult-classes,
-.p-instructor-profile,
+.p-classes,
+.p-profile,
 .p-studio,
 .l-footer {
   margin-top: 96px;
+}
+
+.p-classes {
+  .p-classes__fee {
+    margin-top: 64px;
+  }
+
+  .p-classes__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
 }

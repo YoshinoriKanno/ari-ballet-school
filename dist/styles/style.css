@@ -146,6 +146,7 @@ body {
 }
 .l-negative.l-negative--parallax {
   height: 120px;
+  margin-top: 64px;
   overflow: hidden;
 }
 
@@ -316,7 +317,9 @@ body {
 
 .c-classes__card {
   padding: 32px;
+  line-height: 2;
   background-color: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 10%);
 }
 
 .c-cta-balloon {
@@ -375,9 +378,36 @@ body {
 }
 
 .c-heading-h4 {
+  padding-bottom: 16px;
   margin-bottom: 16px;
   font-size: 18px;
   line-height: 1;
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.c-heading-h5 {
+  font-size: 18px;
+}
+
+.p-classes--adult .p-classes--adult__lead {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.p-concept .p-concept__lead {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+@media screen and (width >= 375px) {
+  .p-concept .p-concept__lead {
+    font-size: 24px;
+  }
+}
+.p-concept .p-concept__lead p {
+  margin-top: 8px;
 }
 
 .p-header-sticky .p-header-sticky__container {
@@ -590,13 +620,20 @@ body {
 
 .p-nav {
   display: none;
-  padding-top: 32px;
+  padding-top: 128px;
   padding-bottom: 32px;
+  font-weight: 400;
 }
 
 @media screen and (width >= 768px) {
   .p-nav {
     display: block;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .p-nav {
+    font-size: 18px;
   }
 }
 .p-nav .p-nav__lists {
@@ -606,7 +643,7 @@ body {
   justify-content: start;
 }
 
-@media screen and (width >= 1440px) {
+@media screen and (width >= 1024px) {
   .p-nav .p-nav__lists {
     grid-template-columns: repeat(6, auto);
     gap: 16px;
@@ -761,6 +798,7 @@ body {
 }
 .p-profile .p-profile__paragraph {
   margin-top: 12px;
+  line-height: 1.75;
 }
 
 .p-main {
@@ -840,12 +878,20 @@ body {
 }
 
 .p-concept,
-.p-kids-classes,
-.p-adult-classes,
-.p-instructor-profile,
+.p-classes,
+.p-profile,
 .p-studio,
 .l-footer {
   margin-top: 96px;
+}
+
+.p-classes .p-classes__fee {
+  margin-top: 64px;
+}
+.p-classes .p-classes__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
 }
 
 .p-scroll-arrow {

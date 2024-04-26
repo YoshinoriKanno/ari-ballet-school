@@ -108,6 +108,7 @@
 
   &.l-negative--parallax {
     height: 120px;
+    margin-top: 64px;
     overflow: hidden;
 
     @include mq-cdt(mobile-m) {

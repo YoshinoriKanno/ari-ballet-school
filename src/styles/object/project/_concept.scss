@@ -1,0 +1,15 @@
+.p-concept {
+  .p-concept__lead {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 2;
+
+    @include mq-cdt(mobile-m) {
+      font-size: 24px;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+  }
+}
