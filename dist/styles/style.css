@@ -489,7 +489,7 @@ body {
   }
 }
 
-@media screen and (width >= 1024px) {
+@media screen and (width >= 1440px) {
   .p-concept .p-concept__lead {
     font-size: 24px;
   }
@@ -1105,6 +1105,13 @@ body {
   border-radius: 9999px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+}
+
+@media screen and (width >= 1440px) {
+  .p-scroll-to-top {
+    right: 50%;
+    margin-right: -704px;
+  }
 }
 .p-scroll-to-top.is-hidden {
   display: none;

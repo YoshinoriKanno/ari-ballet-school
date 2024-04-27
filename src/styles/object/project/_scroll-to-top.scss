@@ -1,5 +1,4 @@
 .p-scroll-to-top {
-  // display: none;
   position: fixed;
   right: 16px;
   bottom: 16px;
@@ -17,68 +16,13 @@
   border-color: rgb(255 255 255 / 65%);
   border-style: solid;
   border-width: 1px;
-
-  // background-color: #e6e2dc;
   border-radius: 9999px;
   opacity: 0;
-
-  // opacity をゆっくり変化させる
   transition: opacity 0.2s ease-in-out;
 
-  // animation: arrowmove 1s ease-in-out infinite;
-
-  @include mq-cdt(tablet) {
-    // bottom: 20px;
-
-    // position: fixed;
-    // bottom: 110px;
-    // left: 50%;
-    // z-index: 1;
-    // display: none;
-    // margin-left: 390px;
-    // font-size: 18px;
-    // font-weight: bold;
-    // line-height: 1;
-    // color: $color-primary;
-    // opacity: 0;
-    // writing-mode: tb-rl;
-    // writing-mode: vertical-rl;
-
-    @media screen and (width >=840px) {
-      // display: block;
-    }
-
-    @include mq-cdt(laptop) {
-      // margin-left: 390px;
-    }
-
-    &::before {
-      // position: absolute;
-      // right: 5px;
-      // bottom: -100px;
-      // width: 2px;
-      // height: 20px;
-      // content: '';
-      // background-color: $color-primary;
-      // rotate: 20deg;
-    }
-
-    &::after {
-      // position: absolute;
-      // right: 0;
-      // bottom: -100px;
-      // left: 0;
-      // width: 2px;
-      // height: 90px;
-      // margin-right: auto;
-      // margin-left: auto;
-      // content: '';
-      // background-color: $color-primary;
-    }
-  }
-
   @include mq-cdt(laptop-l) {
-    // margin-left: 520px;
+    right: 50%;
+    margin-right: -704px;
   }
 
   &.is-hidden {

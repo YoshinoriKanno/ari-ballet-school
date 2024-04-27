@@ -12,7 +12,7 @@
       font-size: 21px;
     }
 
-    @include mq-cdt(laptop) {
+    @include mq-cdt(laptop-l) {
       font-size: 24px;
     }
 
