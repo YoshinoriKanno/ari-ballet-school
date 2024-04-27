@@ -403,6 +403,13 @@ body {
   }
 }
 
+@media screen and (width >= 425px) {
+  .c-heading-h2 {
+    margin-bottom: 64px;
+    font-size: 36px;
+  }
+}
+
 @media screen and (width >= 768px) {
   .c-heading-h2 {
     font-size: 64px;
@@ -459,6 +466,12 @@ body {
 }
 
 @media screen and (width >= 425px) {
+  .p-concept .p-concept__lead {
+    font-size: 18px;
+  }
+}
+
+@media screen and (width >= 768px) {
   .p-concept .p-concept__lead {
     font-size: 24px;
   }
@@ -959,6 +972,7 @@ body {
   }
 }
 
+.p-classes .p-classes__schedule,
 .p-classes .p-classes__fee {
   margin-top: 64px;
 }

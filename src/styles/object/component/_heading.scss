@@ -9,6 +9,11 @@
     font-size: 30px;
   }
 
+  @include mq-cdt(mobile-l) {
+    margin-bottom: 64px;
+    font-size: 36px;
+  }
+
   @include mq-cdt(tablet) {
     font-size: 64px;
   }

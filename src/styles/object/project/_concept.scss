@@ -5,6 +5,10 @@
     line-height: 2;
 
     @include mq-cdt(mobile-l) {
+      font-size: 18px;
+    }
+
+    @include mq-cdt(tablet) {
       font-size: 24px;
     }
 
