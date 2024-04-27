@@ -68,7 +68,7 @@
 .l-header-sticky {
   display: none;
 
-  @media screen and (width >=768px) {
+  @include mq-cdt(tablet) {
     position: absolute;
     left: 50%;
     z-index: 3;

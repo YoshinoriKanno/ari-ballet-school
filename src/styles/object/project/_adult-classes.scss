@@ -1,7 +1,12 @@
 .p-classes--adult {
   .p-classes--adult__lead {
     margin-bottom: 32px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.75;
+
+    @include mq-cdt(mobile-m) {
+      font-size: 18px;
+    }
+
   }
 }

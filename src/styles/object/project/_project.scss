@@ -14,6 +14,11 @@
     top: 8px;
     right: 24px;
   }
+
+  @include mq-cdt(laptop-l) {
+    right: 50%;
+    margin-right: -697px;
+  }
 }
 
 .p-header-sticky__button {
@@ -24,6 +29,7 @@
   justify-content: center;
   width: 58px;
   height: 58px;
+
 }
 
 .p-header-sticky__button .p-header-sticky__button-bar {
@@ -78,7 +84,12 @@
 .p-profile,
 .p-studio,
 .l-footer {
-  margin-top: 96px;
+  margin-top: 64px;
+
+  @include mq-cdt(mobile-m) {
+    margin-top: 96px;
+  }
+
 }
 
 .p-classes {
@@ -88,7 +99,25 @@
 
   .p-classes__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 16px;
+
+    @include mq-cdt(mobile-m) {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    div {
+      &:nth-of-type(1) {
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        @include mq-cdt(mobile-m) {
+          padding: unset;
+          border: unset;
+        }
+      }
+    }
+
   }
 }

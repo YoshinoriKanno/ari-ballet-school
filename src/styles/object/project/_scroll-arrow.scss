@@ -23,13 +23,9 @@
   transition: opacity 0.2s ease-in-out;
   animation: arrowmove 3s ease-in-out infinite;
 
-  @media screen and (width >=840px) {
-    display: grid;
-    justify-content: center;
-  }
-
-  @include mq-cdt(laptop) {
-    // declarations
+  @include mq-cdt(laptop-l) {
+    right: 50%;
+    margin-right: -705px;
   }
 
   &::before {

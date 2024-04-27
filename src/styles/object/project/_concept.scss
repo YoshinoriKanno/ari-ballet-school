@@ -1,10 +1,11 @@
 .p-concept {
   .p-concept__lead {
     margin-bottom: 32px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2;
 
-    @include mq-cdt(mobile-m) {
+    @include mq-cdt(mobile-l) {
+      font-size: 18px;
       font-size: 24px;
     }
 
