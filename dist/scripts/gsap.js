@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       img,
       { y: -100 }, // 開始時の位置（上に50pxずらす）
       {
-        y: 0, // 終了時の位置（下に50pxずらす） 
+        y: 0, // 終了時の位置（下に50pxずらす）
         scrollTrigger: {
           trigger: img.parentNode, // トリガーとなる要素
           start: 'top bottom', // 要素の上端がビューポートの下端に達したときに開始
@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const headings = document.querySelectorAll('.c-heading-h2');
   headings.forEach((heading) => {
     const split = new SplitType(heading, { types: 'chars' });
-
 
     // 各文字にアニメーションを適用
     gsap.from(split.chars, {

@@ -29,7 +29,6 @@
   justify-content: center;
   width: 58px;
   height: 58px;
-
 }
 
 .p-header-sticky__button .p-header-sticky__button-bar {
@@ -89,7 +88,6 @@
   @include mq-cdt(mobile-m) {
     margin-top: 96px;
   }
-
 }
 
 .p-classes {
@@ -101,23 +99,22 @@
     display: grid;
     gap: 16px;
 
-    @include mq-cdt(mobile-m) {
+    @include mq-cdt(mobile-l) {
       grid-template-columns: 1fr 1fr;
       gap: 32px;
     }
 
     div {
       &:nth-of-type(1) {
-        border-bottom: 1px solid rgb(255 255 255 / 10%);
         padding-top: 16px;
         padding-bottom: 16px;
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
 
-        @include mq-cdt(mobile-m) {
+        @include mq-cdt(mobile-l) {
           padding: unset;
           border: unset;
         }
       }
     }
-
   }
 }

@@ -4,7 +4,6 @@
   font-weight: 100;
   line-height: 1;
 
-
   @include mq-cdt(mobile-m) {
     margin-bottom: 64px;
     font-size: 30px;
@@ -26,15 +25,15 @@
 }
 
 .c-heading-h4 {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.375;
-  margin-bottom: 16px;
 
-  @include mq-cdt(mobile-m) {
+  @include mq-cdt(mobile-l) {
     padding-bottom: 16px;
-    border-bottom: 1px solid rgb(255 255 255 / 10%);
-    line-height: 1;
     font-size: 18px;
+    line-height: 1;
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
   }
 }
 

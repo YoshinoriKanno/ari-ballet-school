@@ -58,10 +58,9 @@
     margin-top: 16px;
     background-color: rgb(255 255 255 / 15%);
 
-    @include mq-cdt(mobile-m) {
+    @include mq-cdt(mobile-l) {
       display: table;
     }
-
   }
 
   td {

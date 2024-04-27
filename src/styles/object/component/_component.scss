@@ -17,4 +17,16 @@
     padding: 32px;
   }
 
+  table {
+    font-size: 13px;
+
+    @include mq-cdt(mobile-m) {
+      font-size: 16px;
+    }
+  }
+
+  th {
+    padding-right: 8px;
+    font-weight: 100;
+  }
 }
