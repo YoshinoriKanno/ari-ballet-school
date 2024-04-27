@@ -61,6 +61,14 @@
     @include mq-cdt(mobile-l) {
       display: table;
     }
+
+    @include mq-cdt(tablet) {
+      display: block;
+    }
+
+    @include mq-cdt(laptop) {
+      display: table;
+    }
   }
 
   td {

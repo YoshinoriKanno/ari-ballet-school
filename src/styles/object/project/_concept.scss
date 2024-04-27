@@ -9,6 +9,10 @@
     }
 
     @include mq-cdt(tablet) {
+      font-size: 21px;
+    }
+
+    @include mq-cdt(laptop) {
       font-size: 24px;
     }
 

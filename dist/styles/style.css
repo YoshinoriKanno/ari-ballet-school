@@ -443,6 +443,18 @@ body {
   }
 }
 
+@media screen and (width >= 768px) {
+  .c-heading-h4 {
+    line-height: 1.375;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .c-heading-h4 {
+    line-height: 1;
+  }
+}
+
 .c-heading-h5 {
   font-size: 18px;
 }
@@ -472,6 +484,12 @@ body {
 }
 
 @media screen and (width >= 768px) {
+  .p-concept .p-concept__lead {
+    font-size: 21px;
+  }
+}
+
+@media screen and (width >= 1024px) {
   .p-concept .p-concept__lead {
     font-size: 24px;
   }
@@ -1161,6 +1179,18 @@ body {
 }
 
 @media screen and (width >= 425px) {
+  .p-studio .p-studio__fee-table-container {
+    display: table;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .p-studio .p-studio__fee-table-container {
+    display: block;
+  }
+}
+
+@media screen and (width >= 1024px) {
   .p-studio .p-studio__fee-table-container {
     display: table;
   }
