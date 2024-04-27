@@ -459,16 +459,22 @@ body {
   font-size: 18px;
 }
 
-.p-classes--adult .p-classes--adult__lead {
+.p-classes--adult .p-classes--adult__lead-container {
   margin-bottom: 32px;
   font-size: 16px;
   line-height: 1.75;
 }
 
 @media screen and (width >= 375px) {
-  .p-classes--adult .p-classes--adult__lead {
+  .p-classes--adult .p-classes--adult__lead-container {
     font-size: 18px;
   }
+}
+.p-classes--adult .p-classes--adult__lead-container .p-classes--adult__lead {
+  margin-top: 16px;
+}
+.p-classes--adult .p-classes--adult__lead-container .p-classes--adult__lead:first-child {
+  margin-top: 0;
 }
 
 .p-concept .p-concept__lead {
