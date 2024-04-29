@@ -434,10 +434,15 @@ body {
   line-height: 1.375;
 }
 
+@media screen and (width >= 375px) {
+  .c-heading-h4 {
+    font-size: 18px;
+  }
+}
+
 @media screen and (width >= 425px) {
   .c-heading-h4 {
     padding-bottom: 16px;
-    font-size: 18px;
     line-height: 1;
     border-bottom: 1px solid rgb(255 255 255 / 10%);
   }
